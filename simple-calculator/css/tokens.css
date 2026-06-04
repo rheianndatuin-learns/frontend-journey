@@ -1,0 +1,22 @@
+@import url('archivo.css');
+
+:root {
+    --font-thin: 'Archivo-Thin', sans-serif;
+    --font-thin-italic: 'Archivo-ThinItalic', sans-serif;
+    --font-extra-light: 'Archivo-ExtraLight', sans-serif;
+    --font-extra-light-italic: 'Archivo-ExtraLightItalic', sans-serif;
+    --font-light: 'Archivo-Light', sans-serif;
+    --font-light-italic: 'Archivo-LightItalic', sans-serif;
+    --font-regular: 'Archivo-Regular', sans-serif;
+    --font-italic: 'Archivo-Italic', sans-serif;
+    --font-medium: 'Archivo-Medium', sans-serif;
+    --font-medium-italic: 'Archivo-Medium', sans-serif;
+    --font-semibold: 'Archivo-SemiBold', sans-serif;
+    --font-semibold-italic: 'Archivo-SemiBoldItalic', sans-serif;
+    --font-bold: 'Archivo-Bold', sans-serif;
+    --font-bold-italic: 'Archivo-BoldItalic', sans-serif;
+    --font-extrabold: 'Archivo-ExtraBold', sans-serif;
+    --font-extrabold-italic: 'Archivo-ExtraBoldItalic', sans-serif;
+    --font-black: 'Archivo-Black', sans-serif;
+    --font-black-italic: 'Archivo-BlackItalic', sans-serif;
+}
