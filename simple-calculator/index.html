@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="calculator" id="calculator" aria-label="Simple calculator">
+            <header class="calculator__header">
+                <div class="theme-toggle" role="toolbar" aria-label="Theme toggle">
+                    <button type="button" class="btn btn--theme" id="theme-light" aria-label="Light theme">☀︎</button>
+                    <button type="button" class="btn btn--theme" id="theme-dark" aria-label="Dark theme">⏾</button>
+                </div>
+                <output id="display" class="calculator__display" role="status" aria-live="polite">0</output>
+            </header>
+
+            <div class="calculator__keys" id="keyboard" role="group" aria-label="Calculator keys">
+                <div class="calculator__row">
+                    <button type="button" class="btn btn--action btn--reset" data-action="reset" id="reset">↻</button>
+                    <button type="button" class="btn btn--action btn--delete" data-action="delete" id="delete">⌫</button>
+                    <button type="button" class="btn btn--operator" data-value="/" aria-label="divide">÷</button>
+                    <button type="button" class="btn btn--operator" data-value="*" aria-label="multiply">×</button>
+                </div>
+
+                <div class="calculator__row">
+                    <button type="button" class="btn btn--number" data-value="7">7</button>
+                    <button type="button" class="btn btn--number" data-value="8">8</button>
+                    <button type="button" class="btn btn--number" data-value="9">9</button>
+                    <button type="button" class="btn btn--operator" data-value="-" aria-label="subtract">−</button>
+                </div>
+
+                <div class="calculator__row">
+                    <button type="button" class="btn btn--number" data-value="4">4</button>
+                    <button type="button" class="btn btn--number" data-value="5">5</button>
+                    <button type="button" class="btn btn--number" data-value="6">6</button>
+                    <button type="button" class="btn btn--operator" data-value="+" aria-label="add">+</button>
+                </div>
+
+                <div class="calculator__row">
+                    <button type="button" class="btn btn--number" data-value="1">1</button>
+                    <button type="button" class="btn btn--number" data-value="2">2</button>
+                    <button type="button" class="btn btn--number" data-value="3">3</button>
+                    <button type="button" class="btn btn--equal" data-action="calculate" id="equals">=</button>
+                </div>
+
+                <div class="calculator__row">
+                    <button type="button" class="btn btn--number btn--zero" data-value="0">0</button>
+                    <button type="button" class="btn btn--number" data-value=".">.</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
