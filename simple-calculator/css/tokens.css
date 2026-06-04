@@ -1,6 +1,7 @@
 @import url('archivo.css');
 
 :root {
+    /* Fonts */
     --font-thin: 'Archivo-Thin', sans-serif;
     --font-thin-italic: 'Archivo-ThinItalic', sans-serif;
     --font-extra-light: 'Archivo-ExtraLight', sans-serif;
@@ -19,4 +20,29 @@
     --font-extrabold-italic: 'Archivo-ExtraBoldItalic', sans-serif;
     --font-black: 'Archivo-Black', sans-serif;
     --font-black-italic: 'Archivo-BlackItalic', sans-serif;
+
+    /* Dark Mode Colors */
+    --dark-background: #242629;
+    --dark-headline: #fffffe;
+    --dark-subheadline: #94a1b2;
+    --dark-cardbackground: #16161a;
+    --dark-cardheading: #16161a;
+    --dark-cardparagraph: #94a1b2;
+    --dark-stroke: #010101;
+    --dark-main: #fffffe;
+    --dark-highlight: #7f5af0;
+    --dark-secondary: #72757e;
+    --dark-tertiary: #2cb67d;
+
+    /* Light Mode Colors */
+    --light-background: #fffffe;
+    --light-headline: #2b2c34;
+    --light-paragraph: #2b2c34;
+    --light-button: #6246ea;
+    --light-button-text: #fffffe;
+    --light-stroke: #2b2c34;
+    --light-main: #fffffe;
+    --light-highlight: #6246ea;
+    --light-secondary: #d1d1e9;
+    --light-tertiary: #e45858;
 }
