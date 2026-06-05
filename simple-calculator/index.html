@@ -16,7 +16,10 @@
                     <button type="button" class="btn btn--theme" id="theme-light" aria-label="Light theme">☀︎</button>
                     <button type="button" class="btn btn--theme" id="theme-dark" aria-label="Dark theme">⏾</button>
                 </div>
-                <output id="display" class="calculator__display" role="status" aria-live="polite">0</output>
+                <div class="display">
+                    <output id="display-input" class="calculator__display" role="status" aria-live="polite">0</output>
+                    <output id="display-result" class="calculator__display" role="status" aria-live="polite"></output>
+                </div>
             </header>
 
             <div class="calculator__keys" id="keyboard" role="group" aria-label="Calculator keys">
