@@ -11,9 +11,22 @@ const equalsBtn = document.getElementById("equals");
 let value = "";
 let sign = "";
 let currentNumber = "";
-let nextNumber = false;
+let isNextNumber = false;
 let inputString = "";
-let result = "";
+let result = "0";
+let isDark = true;
+
+darkModeBtn.style.display = "none";
+
+function applyTheme(dark) {
+  isDark = dark;
+
+  lightModeBtn.style.display = dark ? "" : "none";
+  darkModeBtn.style.display = dark ? "none" : "";
+}
+
+lightModeBtn.addEventListener("click", () => applyTheme(false));
+darkModeBtn.addEventListener("click", () => applyTheme(true));
 
 function updateDisplayInput() {
   displayInput.textContent = inputString;
@@ -27,9 +40,9 @@ resetBtn.addEventListener("click", () => {
   value = "";
   sign = "";
   currentNumber = "";
-  nextNumber = false;
+  isNextNumber = false;
   inputString = "";
-  result = "";
+  result = "0";
   updateDisplayInput();
   updateDisplayResult("");
 });
@@ -43,9 +56,12 @@ deeBtn.addEventListener("click", () => {
 operatorBtn.forEach((op) => {
   op.addEventListener("click", (o) => {
     sign = o.currentTarget.dataset.value;
-    if (sign && currentNumber) {
-      nextNumber = true;
-      inputString += "" + sign + "";
+    const lastChar = inputString.at(-1);
+    const isOperator = ["+", "-", "*", "/"].includes(lastChar);
+
+    if (sign && currentNumber && !isOperator) {
+      isNextNumber = true;
+      inputString += sign;
       updateDisplayInput();
     }
   });
@@ -54,10 +70,13 @@ operatorBtn.forEach((op) => {
 numberBtn.forEach((num) => {
   num.addEventListener("click", (n) => {
     value = n.currentTarget.dataset.value;
+
+    if (value === "." && currentNumber.includes(".")) return;
+
     if (value) {
-      if (nextNumber) {
+      if (isNextNumber) {
         currentNumber = value;
-        nextNumber = false;
+        isNextNumber = false;
       } else {
         currentNumber += value;
       }
@@ -73,5 +92,6 @@ equalsBtn.addEventListener("click", () => {
     updateDisplayResult(result);
     inputString = String(result);
     currentNumber = String(result);
+    isNextNumber = true;
   }
 });
